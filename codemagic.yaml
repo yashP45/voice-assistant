@@ -20,9 +20,13 @@ scripts:
     script: |
       cd android
       ./gradlew bundleRelease
+  - name: Install fastlane-plugin-firebase_app_distribution
+  script: | 
+    gem install bundler
+    sudo gem install fastlane-plugin-firebase_app_distribution --user-install
 
 artifacts:
-  - android/app/build/outputs/**/*.aab
+  - android/app/build/outputs/**/*.apk
 
 environment:
   groups:
@@ -37,10 +41,8 @@ publishing:
 
     android:
       # Add your Android app id retrieved from Firebase console
-      app_id: 1:893539496728:android:c473a6eabc4e0678e8e46d
-
+      app_id: 1:893539496728:android:a08168cc5fa4ff5ce8e46d
       # Add one or more groups that you wish to distribute your Android application to.
       # You can create groups in the Firebase console
       groups:
         - yash
-      artifact_type: 'apk'
