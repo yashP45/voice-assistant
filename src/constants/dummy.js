@@ -8,6 +8,3 @@ export const dummyMessage = [
     content: 'how are you',
   },
 ];
-
-export const apiKey =
-  'sk-proj-EyXVF1X6tgffAtcBPcRCT3BlbkFJaSUASiMkCN9hJGJ8BtN4';
